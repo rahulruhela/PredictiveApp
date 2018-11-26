@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewBag.Title = "Predict";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link href="~/colorlib-regform-16/fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/colorlib-regform-16/vendor/nouislider/nouislider.min.css" rel="stylesheet" />
+
+    <!-- Main css -->
+    <link href="~/colorlib-regform-16/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img" style="width:100% !important">
+
+                    <img src="~/img/ehealth-news.jpg" style="height: 860px;" />
+                    <div class="signup-img-content">
+                        @*<h2>Register now </h2>
+                            <p>while seats are available !</p>*@
+                    </div>
+                </div>
+                <div class="signup-form">
+                    Health insurance predictor
+                    <form method="POST" class="register-form" id="register-form">
+                        @*<div class="row">
+
+            <div class="form-group">
+
+                <div class="form-input">
+                    <label for="chequeno">Enter Age :-</label>
+                    <input type="text" name="txtAge" id="txtAge" placeholder="Enter Age" />
+                </div>
+
+                <div class="form-radio">
+                    <div class="label-flex">
+                        <label for="payment">Sex :-</label>
+                    </div>
+                    <div class="form-radio-group">
+                        <div class="form-radio-item">
+                            <input type="radio" name="MaleFemale" id="Male" checked>
+                            <label for="cash">Male</label>
+                            <span class="check"></span>
+                        </div>
+                        <div class="form-radio-item">
+                            <input type="radio" name="MaleFemale" id="Female">
+                            <label for="cheque">Female</label>
+                            <span class="check"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-input">
+                    <label for="chequeno">Enter Dependent Members :-</label>
+                    <input type="text" name="DependentMembers" id="DependentMembers" />
+                </div>
+                <div class="form-radio">
+                    <div class="label-flex">
+                        <label for="payment">Do you smoke ? :- </label>
+                    </div>
+                    <div class="form-radio-group">
+                        <div class="form-radio-item">
+                            <input type="radio" name="smokeYesOrNo" id="SmokeYes" checked>
+                            <label for="cash">Yes</label>
+                            <span class="check"></span>
+                        </div>
+                        <div class="form-radio-item">
+                            <input type="radio" name="smokeYesOrNo" id="SmokeNo">
+                            <label for="cheque">No</label>
+                            <span class="check"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-select">
+                    <div class="label-flex">
+                        <label for="meal_preference">Select City/Province :-</label>
+
+                    </div>
+                    <div class="select-list">
+                        <select name="meal_preference" id="meal_preference">
+                            <option value="">Please select</option>
+                            <option value="AB">Alberta</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland and Labrador</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="ON">Ontario</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="QC">Quebec</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="NT">Northwest Territories</option>
+                            <option value="NU">Nunavut</option>
+                            <option value="YT">Yukon</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>*@
+
+                        @*<div class="row">
+
+            <div class="col-md-12 col-sm-12 col-lg-12">Enter Age :-</div>
+            <div class="col-md-12 col-sm-12 col-lg-12"> <input type="text" name="txtAge" id="txtAge" placeholder="Enter Age" /></div>
+
+
+        </div>
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12 col-lg-12">Sex :-</div>
+            <div class="col-md-6 col-sm-6 col-lg-6"><input type="radio" name="MaleFemale" id="Male" checked></div>
+            <div class="col-md-6 col-sm-6 col-lg-6"><input type="radio" name="MaleFemale" id="Female"></div>
+
+        </div>*@
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12 col-lg-12">Enter number1 :-</div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input type="text" name="num1" id="txtnum1" placeholder="num 1" />
+                            </div>
+
+
+                        </div>
+
+                        <br />
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12 col-lg-12">Enter Number 2 :-</div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input type="text" name="num2" id="txtnum2" placeholder="num 2" />
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <b>Add:-</b><h3 id="h3Tag"></h3>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <b>Sub:-</b><h3 id="h3Tag1"></h3>
+                            </div>
+
+
+
+                        </div>
+
+                        <br />
+
+
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="btnsubmit" name="submit" />
+                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/colorlib-regform-16/vendor/jquery/jquery.min.js"></script>
+    <script src="~/colorlib-regform-16/vendor/nouislider/nouislider.min.js"></script>
+    <script src="~/colorlib-regform-16/vendor/wnumb/wNumb.js"></script>
+    <script src="~/colorlib-regform-16/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/colorlib-regform-16/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    @*<script src="~/colorlib-regform-16/js/main.js"></script>*@
+    <script>
+        $(document).ready(function () {
+
+            $("#btnsubmit").click(function (e) { 
+                e.preventDefault();
+
+                var n1 = $("#txtnum1").val();
+                var n2 = $("#txtnum2").val();
+                
+             $.ajax({
+                url: "@Url.Action("GetResult", "Home")",
+                 data: { 'num1': n1, 'num2': n2 },
+                type: "GET",
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                 success: function (data) {
+                     debugger;
+                    $("#h3Tag").text(data.add);
+                    $("#h3Tag1").text(data.sub);
+                    
+                    $('#MessageModal').modal('show');
+                   
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

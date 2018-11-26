@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Themelight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google fonts -->
+
+    @*<link href="~/themelight-free/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/animate.min.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/icon.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/image.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/lightbox.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/owl.transitions.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/preloader.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/responsive.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/style.css" rel="stylesheet" />
+    <link href="~/themelight-free/css/tab.css" rel="stylesheet" />*@
+    <!-- Css link -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/~/themelight-free/ionicons.min.css">
+    <link rel="stylesheet" href="~/themelight-free/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/themelight-free/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/themelight-free/css/owl.transitions.css">
+    <link rel="stylesheet" href="~/themelight-free/css/animate.min.css">
+    <link rel="stylesheet" href="~/themelight-free/css/lightbox.css">
+    <link rel="stylesheet" href="~/themelight-free/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/themelight-free/css/preloader.css">
+    <link rel="stylesheet" href="~/themelight-free/css/image.css">
+    <link rel="stylesheet" href="~/themelight-free/css/icon.css">
+    <link rel="stylesheet" href="~/themelight-free/css/style.css">
+    <link rel="stylesheet" href="~/themelight-free/css/responsive.css">
+
+</head>
+<body id="top">
+    <header id="navigation" class="navbar-fixed-top animated-header">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
+                <!-- logo -->
+                <h1 class="navbar-brand">
+                    @*<a href="#body"><img src="img/logo.png" height="40" width="164" alt=""></a>*@
+                    <a href="#body" style="font:14px arial, verdana"><b style="font:24px arial, verdana">Healthgo&reg; </b></a>
+
+                </h1>
+                <!-- /logo -->
+            </div>
+
+            <!-- main nav -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <ul id="nav" class="nav navbar-nav menu">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#features">Service</a></li>
+                    <li><a href="#portfolio">Products</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#pricing-table">Price</a></li>
+                    @*<li><a href="#blog">Blog</a></li>*@
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- /main nav -->
+
+        </div>
+    </header>
+    
+        @RenderBody()
+      
+    
+    <script src="~/themelight-free/~/themelight-free/js/bootstrap.js"></script>
+    <script src="~/themelight-free/js/jquery-1.11.3.min.js"></script>
+    <script src="~/themelight-free/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+    <script src="~/themelight-free/js/waypoints.min.js"></script>
+    <script src="~/themelight-free/js/lightbox.js"></script>
+    <script src="~/themelight-free/js/jquery.counterup.min.js"></script>
+    <script src="~/themelight-free/js/owl.carousel.min.js"></script>
+    <script src="~/themelight-free/js/html5lightbox.js"></script>
+    <script src="~/themelight-free/js/jquery.mixitup.js"></script>
+    <script src="~/themelight-free/js/wow.min.js"></script>
+    <script src="~/themelight-free/js/jquery.scrollUp.js"></script>
+    <script src="~/themelight-free/js/jquery.sticky.js"></script>
+    <script src="~/themelight-free/js/jquery.nav.js"></script>
+    <script src="~/themelight-free/js/main.js"></script>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>
