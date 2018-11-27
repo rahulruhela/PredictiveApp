@@ -132,9 +132,9 @@
 
                         <div class="row">
 
-                            <div class="col-md-12 col-sm-12 col-lg-12">Enter number1 :-</div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">Enter Age :-</div>
                             <div class="col-md-12 col-sm-12 col-lg-12">
-                                <input type="text" name="num1" id="txtnum1" placeholder="num 1" />
+                                <input type="text" name="age" id="txtage" placeholder="num 1" />
                             </div>
 
 
@@ -143,21 +143,29 @@
                         <br />
                         <div class="row">
 
-                            <div class="col-md-12 col-sm-12 col-lg-12">Enter Number 2 :-</div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">Enter BMI :-</div>
                             <div class="col-md-12 col-sm-12 col-lg-12">
-                                <input type="text" name="num2" id="txtnum2" placeholder="num 2" />
+                                <input type="text" name="bmi" id="txtbmi" placeholder="num 2" />
                             </div>
+                        </div>
+                        <div class="row">
 
-
+                            <div class="col-md-12 col-sm-12 col-lg-12">Do You Smoke :-</div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <select class="form-control" id="selectSmoke">
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="row">
 
-                            <div class="col-md-12 col-sm-12 col-lg-12">
+                            @*<div class="col-md-12 col-sm-12 col-lg-12">
                                 <b>Add:-</b><h3 id="h3Tag"></h3>
-                            </div>
+                            </div>*@
                             <div class="col-md-12 col-sm-12 col-lg-12">
-                                <b>Sub:-</b><h3 id="h3Tag1"></h3>
+                                <b>Result:-</b><h3 id="h3Tag1"></h3>
                             </div>
 
 
@@ -191,12 +199,13 @@
             $("#btnsubmit").click(function (e) { 
                 e.preventDefault();
 
-                var n1 = $("#txtnum1").val();
-                var n2 = $("#txtnum2").val();
+                var age = $("#txtage").val();
+                var bmi = $("#txtbmi").val();
+                var smoke = $('#selectSmoke').val();
                 
              $.ajax({
-                url: "@Url.Action("GetResult", "Home")",
-                 data: { 'num1': n1, 'num2': n2 },
+                url: "@Url.Action("HealthCostPredict2", "Home")",
+                 data: { 'age': age, 'bmi': bmi, 'smoke': smoke },
                 type: "GET",
                 cache: false,
                 contentType: "application/json; charset=utf-8",

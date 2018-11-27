@@ -89,7 +89,7 @@ namespace PredictiveApp.Controllers
             double res;
             res = calc.add(a, b);
             string add = res.ToString();
-            objCalcModel.add = add;
+           
             res = calc.sub(a, b);
             string sub = res.ToString();
             objCalcModel.sub = sub;
@@ -156,8 +156,7 @@ namespace PredictiveApp.Controllers
             double b = Convert.ToDouble(num2);
             string res;
             res = calc.calc_insurance(40,40,1);
-            string add = res.ToString();
-            objCalcModel.add = res;
+            string add = res.ToString();       
            
 
             return Json(objCalcModel, JsonRequestBehavior.AllowGet);
@@ -166,7 +165,42 @@ namespace PredictiveApp.Controllers
 
 
 
+      
+        //run_cmd("C:/Python36/Healthcare_Cost_Predictor.py", age, BMI, smoke);
+        //run_cmd("C:/Python36/test.py", age, BMI, smoke);
 
+        [HttpGet]
+        public ActionResult HealthCostPredict2(int age, int bmi, int smoke)
+        {
+            CalcModel objCalcModel = new CalcModel();
+
+
+            //int x = 1;
+            //int y = 2;
+            string progToRun = "C:/Research/Healthcare_Cost_Predictor.py";
+
+
+            Process proc = new Process();
+            proc.StartInfo.FileName = "C:/Users/rruhela1/AppData/Local/Programs/Python/Python37/python.exe";
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.StartInfo.UseShellExecute = false;
+
+            // call hello.py to concatenate passed parameters
+            proc.StartInfo.Arguments = string.Concat(progToRun, " ", age, " ", bmi, " ", smoke);
+            proc.Start();
+
+            StreamReader sReader = proc.StandardOutput;
+            //char[] splitter = null;
+            char[] spliter = { '\r' };
+            string[] output = sReader.ReadToEnd().Split(spliter);
+            //objCalcModel.add = Convert.ToInt32(output[0]);
+            string tt = output[1].Replace("\n", ""); ;
+           
+            objCalcModel.sub = tt;
+
+            return Json(objCalcModel, JsonRequestBehavior.AllowGet);
+
+        }
 
 
 

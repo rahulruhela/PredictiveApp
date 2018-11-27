@@ -7,7 +7,8 @@ namespace PredictiveApp.Models
 {
     public class CalcModel
     {
-      public  string add { get; set; }
+      public  int add { get; set; }
         public string sub { get; set; }
+        
     }
 }
